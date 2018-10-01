@@ -6,9 +6,10 @@ from nltk.corpus import stopwords
 from nltk import word_tokenize
 from nltk import sent_tokenize
 import heapq
+import sys
 
 
-link = 'https://en.m.wikipedia.org/wiki/List_of_Marvel_Cinematic_Universe_films'
+link = sys.argv[1]
 source = url.urlopen(link).read()
 soup = bs(source, 'lxml')
 
